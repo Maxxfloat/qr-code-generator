@@ -36,12 +36,10 @@ function App() {
               <div
                 className="flex items-center justify-center w-full text-2xl aspect-square"
                 style={{
-                  backgroundImage:
-                    "radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(119,119,119,1) 100%)",
+                  backgroundImage: `radial-gradient(circle, rgba(255,255,255,1) 0%, ${color} 80%)`,
                 }}
               >
-                {/* Your QR ... */}
-                {onLoad && <Loader />}
+                {onLoad ? <Loader /> : "Your QR"}
               </div>
             )}
             <button
